@@ -1,0 +1,60 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028d7a109860 .scope module, "wireTest2_tb" "wireTest2_tb" 2 4;
+ .timescale -9 -9;
+v0000028d7a10bd70_0 .var "W", 0 0;
+v0000028d7a10be10_0 .var "X", 0 0;
+v0000028d7a10beb0_0 .net "Y", 0 0, L_0000028d7a108900;  1 drivers
+v0000028d7a225950_0 .net "Z", 0 0, L_0000028d7a1f3430;  1 drivers
+S_0000028d7a2257c0 .scope module, "uut" "wireTest2" 2 11, 3 1 0, S_0000028d7a109860;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "W";
+    .port_info 1 /INPUT 1 "X";
+    .port_info 2 /OUTPUT 1 "Y";
+    .port_info 3 /OUTPUT 1 "Z";
+L_0000028d7a108900 .functor NOT 1, v0000028d7a10be10_0, C4<0>, C4<0>, C4<0>;
+L_0000028d7a1f3430 .functor NOT 1, L_0000028d7a108900, C4<0>, C4<0>, C4<0>;
+v0000028d7a1099f0_0 .net "W", 0 0, v0000028d7a10bd70_0;  1 drivers
+v0000028d7a1f2f90_0 .net "X", 0 0, v0000028d7a10be10_0;  1 drivers
+v0000028d7a109560_0 .net "Y", 0 0, L_0000028d7a108900;  alias, 1 drivers
+v0000028d7a108860_0 .net "Z", 0 0, L_0000028d7a1f3430;  alias, 1 drivers
+    .scope S_0000028d7a109860;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "wireTest2_tb.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000028d7a109860 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028d7a10bd70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028d7a10be10_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028d7a10bd70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028d7a10be10_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028d7a10bd70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028d7a10be10_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028d7a10bd70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028d7a10be10_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 34 "$display", "Wire test complete!" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "wireTest2_tb.v";
+    "./wireTest2.v";
