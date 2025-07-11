@@ -1,0 +1,24 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: rgb(240, 112, 112);
+    background-image: linear-gradient(to right, rgb(240, 112, 112), rgb(248, 38, 38)); 
+}
+
+.container
+{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.links{
+    justify-content: space-between;
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
